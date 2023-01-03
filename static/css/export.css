@@ -11,7 +11,9 @@ td.icon,
 th.created-at,
 td.created-at,
 th.updated-at,
-td.updated-at {
+td.updated-at,
+.cp__footer button:nth-child(1),
+.cp__footer button:nth-child(4) {
   display: none !important;
 }
 

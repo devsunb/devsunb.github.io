@@ -45,31 +45,22 @@ div.graph-view-nav {
 
 /* 일지 */
 #journals .journal-item:first-child {
-  margin-top: 0;
-}
-
-#journals .journal-item .journal-title {
-  margin: 0 -6px;
-  padding: 5px 8px;
+  margin-top: 0 !important;
 }
 
 /* 쿼리 */
-.custom-query>div>div>div>div {
+html:not(.is-mobile) .custom-query>div>div>div>div {
   margin-left: 0 !important;
 }
 
-.custom-query>div>div>div>div>.blocks-container {
+html:not(.is-mobile) .custom-query>div>div>div>div>.blocks-container {
   margin-left: -20px;
 }
 
-/* 삼각형 */
+/* 불필요한 삼각형 제거 */
 .custom-query>div>div>div>div>.block-control,
 div[data-drawer-name="logbook"] .block-control .cursor-pointer {
   display: none;
-}
-
-div[data-drawer-name="logbook"] .block-control:hover .cursor-pointer {
-  display: inline;
 }
 
 div[data-drawer-name="logbook"] div.items-center {
@@ -80,7 +71,7 @@ div[data-drawer-name="logbook"] div.items-center {
 /* 작업 */
 .form-checkbox,
 .form-checkbox:focus {
-  margin-right: 8px !important;
+  margin-right: .5rem !important;
   border: 2px solid var(--ls-active-primary-color) !important;
   background-color: transparent !important;
 }
@@ -91,7 +82,7 @@ div[data-drawer-name="logbook"] div.items-center {
 }
 
 .block-marker {
-  padding: 0 6px 0 0;
+  padding: 0 .375rem 0 0;
   margin: 0 !important;
   font-weight: 700;
 }
@@ -105,18 +96,20 @@ div[data-drawer-name="logbook"] div.items-center {
 }
 
 a.priority {
+  margin: 0 !important;
+  padding: 0 .5rem 0 .125rem;
   opacity: .7;
+  font-size: 0;
+}
+
+html.is-ios a.priority {
+  margin-right: -.5rem !important;
 }
 
 a.priority::before {
-  padding: 0 4px 0 2px;
   transition: .3s;
-  font-size: 14px;
+  font-size: .875rem;
   font-weight: 700;
-}
-
-a.priority {
-  font-size: 0px;
 }
 
 a.priority[href="#/page/A" i]:before {
@@ -149,7 +142,7 @@ a.priority[href="#/page/C" i]:before {
 }
 
 .done a.priority::before {
-  padding-left: 1px;
+  padding-left: .0625rem;
 }
 
 .canceled a.priority::before {
@@ -675,25 +668,6 @@ svg.add-button>.circle {
 .cp__palette-main .chosen,
 .cp__select-main .chosen {
   background-color: var(--ls-menu-hover-color);
-}
-
-@media screen and (max-width: 640px) {
-  #head {
-    position: fixed;
-    background-color: var(--ls-primary-background-color);
-  }
-
-  #main-container #main-content-container {
-    padding: 48px 32px 32px 20px !important;
-  }
-
-  .cp__settings-inner>aside {
-    border-right: unset;
-  }
-
-  .cp__settings-inner>aside ul {
-    border-bottom: 1px solid var(--ls-quaternary-background-color);
-  }
 }
 
 .white-theme .cp__header {
