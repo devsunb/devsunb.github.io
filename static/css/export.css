@@ -1,0 +1,29 @@
+/* 불필요한 항목 숨기기 */
+div.ui__dropdown-trigger>button[title="More"],
+div.flashcards-nav,
+a[href="#/graph"],
+.cp__all_pages>div>div.actions,
+.cp__right-sidebar-settings>div:nth-child(1),
+th.selector,
+td.selector,
+th.icon,
+td.icon,
+th.created-at,
+td.created-at,
+th.updated-at,
+td.updated-at {
+  display: none !important;
+}
+
+/* 작업 블록 등 상호작용 차단 */
+.form-checkbox,
+.marker-switch,
+.timestamp a {
+  pointer-events: none;
+}
+
+/* All pages 테이블 패딩 */
+.cp__all_pages_table th,
+.cp__all_pages_table td {
+  padding: 8px 10px;
+}
