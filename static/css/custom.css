@@ -48,6 +48,10 @@ div.graph-view-nav {
   margin-top: 0 !important;
 }
 
+#today-queries>div {
+  min-height: 0 !important;
+}
+
 /* 쿼리 */
 html:not(.is-mobile) .custom-query>div>div>div>div {
   margin-left: 0 !important;
